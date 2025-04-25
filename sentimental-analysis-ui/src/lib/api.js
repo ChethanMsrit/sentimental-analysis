@@ -6,7 +6,7 @@
 export async function analyzeSentiment(reviewText) {
     try {
       const response = await fetch(
-        'https://chethanmsrit-movie-sentiment-analysis.hf.space/sentiment', {
+        'http://localhost:8000/sentiment', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
