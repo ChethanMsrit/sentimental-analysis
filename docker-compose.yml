@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./sentimental-analysis-be
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./sentimental-analysis-be/.env
+
+  frontend:
+    build:
+      context: ./sentimental-analysis-ui
+    ports:
+      - "3000:80"
